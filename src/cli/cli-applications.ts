@@ -14,10 +14,10 @@ export class CLIApplication {
   public registerCommands(commandList: Command[]): void {
     commandList.forEach((command) => {
       if (Object.hasOwn(this.commands, command.getName())) {
-        throw new Error(`Command ${command.getName()} is already `)
+        throw new Error(`Command ${command.getName()} is already `);
       }
       this.commands[command.getName()] = command;
-    })
+    });
   }
 
   public getCommand(commandName: string): Command {

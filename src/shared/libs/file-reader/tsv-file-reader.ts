@@ -56,13 +56,13 @@ export class TSVFileReader implements FileReader {
         favorite: favorite === 'true',
         rating: Number(parseFloat(rating.replace(/,/g, '.')).toFixed(2)),
         type: OfferType[type as 'apartment' | 'house' | 'room' | 'hotel' ],
-        rooms: parseInt(rooms),
-        guests: parseInt(guests),
+        rooms: parseInt(rooms, 2),
+        guests: parseInt(guests, 2),
         price: Number.parseInt(price, 10),
         conveniences: conveniences.split(';')
-          .map((type): ConvenienceType => <ConvenienceType>type),
+          .map((item) => <ConvenienceType>item),
         user: { email, firstname, lastname, avatarPath },
-        comments: parseInt(comments),
+        comments: parseInt(comments, 2),
         coordinates: coordinates.split(';')
           .map((el) => el),
       }));
