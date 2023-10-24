@@ -1,0 +1,109 @@
+{
+  "api": {
+    "titles": [
+      "Beautiful apartment at great location",
+      "Wood and stone place",
+      "Vacation home",
+      "Place to stay",
+      "Ancient tower",
+      "Chalet with amazing view",
+      "Villa near the river",
+      "Little oasis in countryside"
+    ],
+    "descriptions": [
+      "Beautiful & luxurious apartment at great location. Book now!",
+      "Mini flat in downtown",
+      "Mountain and pool views",
+      "Beachfront apartment",
+      "Cozy family apartment",
+      "Breathtaking view house"
+    ],
+    "city": [
+      "Paris",
+      "Cologne",
+      "Brussels",
+      "Amsterdam",
+      "Hamburg",
+      "Dusseldorf"
+    ],
+    "image": [
+      "apartment.jpg",
+      "wood.jpg",
+      "beautiful.jpg",
+      "tower.jpg",
+      "mini-flat.jpg",
+      "villa.jpg"
+    ],
+    "thumbs": [
+      ["apartment-01.jpg", "apartment-02.jpg", "apartment-03.jpg", "apartment-04.jpg", "apartment-05.jpg", "apartment-06.jpg"],
+      ["wood-01.jpg", "wood-02.jpg", "wood-03.jpg", "wood-04.jpg", "wood-05.jpg", "wood-06.jpg"],
+      ["beautiful-01.jpg", "beautiful-02.jpg", "beautiful-03.jpg", "beautiful-04.jpg", "beautiful-05.jpg", "beautiful-06.jpg"],
+      ["tower-01.jpg", "tower-02.jpg", "tower-03.jpg", "tower-04.jpg", "tower-05.jpg", "tower-06.jpg"],
+      ["mini-flat-01.jpg", "mini-flat-02.jpg", "mini-flat-03.jpg", "mini-flat-04.jpg", "mini-flat-05.jpg", "mini-flat-06.jpg"],
+      ["villa-01.jpg", "villa-02.jpg", "villa-03.jpg", "villa-04.jpg", "villa-05.jpg", "villa-06.jpg"]
+    ],
+    "type":  [
+      "apartment",
+      "house",
+      "room",
+      "hotel"
+    ],
+    "conveniences":  [
+      "Breakfast",
+      "Air conditioning",
+      "Laptop friendly workspace",
+      "Baby seat",
+      "Washer",
+      "Towels",
+      "Fridge"
+    ],
+    "users":  [
+      "Jack London",
+      "Oscar Wilde",
+      "Nikolay Gogol",
+      "Jules Vern",
+      "Ray Bradbury",
+      "Isaac Asimov",
+      "Lev Tolstoy"
+    ],
+    "emails":  [
+      "test@pisem.local",
+      "snow@pisem.local",
+      "president@dka.local",
+      "fish@big.local",
+      "test@pisem.local",
+      "freedom@pisem.local",
+      "rolan@pochta.local",
+      "author@mir.local",
+      "test@lost.loca",
+      "kujo-fan@story.local"
+    ],
+    "avatarPath":  [
+      "awesome-avatar-01.jpg",
+      "awesome-avatar-02.jpg",
+      "user.jpg",
+      "photo.jpg",
+      "awesome-avatar.jpg",
+      "roland.jpg",
+      "smite.jpg",
+      "coffee.jpg"
+    ],
+    "comments":  [
+      "Comment 1",
+      "Comment 2",
+      "Comment 3",
+      "Comment 4",
+      "Comment 5",
+      "Comment 6",
+      "Comment 7"
+    ],
+    "coordinates": {
+      "Paris": ["48.85661", "2.351499"],
+      "Cologne": ["50.938361", "6.959974"],
+      "Brussels": ["50.846557", "4.351697"],
+      "Amsterdam": ["52.370216", "4.895168"],
+      "Hamburg": ["53.550341", "10.000654"],
+      "Dusseldorf": ["51.225402", "6.776314"]
+    }
+  }
+}

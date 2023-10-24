@@ -66,6 +66,34 @@ npm start
 
 В процессе запуска проекта будет выполнен процесс «Сборки проекта» и запуска результирующего кода.
 
+#### Вывод версии
+
+```bash
+npm run ./src/main.cli.ts --  --version
+```
+
+#### Вывод помощи
+
+```bash
+npm run ./src/main.cli.ts --  --help
+```
+
+#### Импортировать данные из TSV
+
+```bash
+npm run ./src/main.cli.ts --  --import <path>:
+```
+
+#### Сгенерировать произвольное количество тестовых данных
+
+```bash
+npm run ./src/main.cli.ts --  --generate <n> <path> <url>
+```
+Пример:
+```bash
+npm run ts ./src/main.cli.ts -- --generate 100 ./mocks/test-data.tsv http://localhost:3123/api
+```
+
 ## Структура проекта
 
 ### Директория `src`
