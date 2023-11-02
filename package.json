@@ -47,7 +47,7 @@
     "got": "^13.0.0",
     "inversify": "^6.0.2",
     "json-server": "^0.17.4",
-    "mongoose": "^8.0.0",
+    "mongoose": "~7.6.1",
     "pino": "^8.16.1",
     "reflect-metadata": "^0.1.13"
   }
