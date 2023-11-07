@@ -1,6 +1,13 @@
 import { inject, injectable } from 'inversify';
 import { Response, Request } from 'express';
-import { BaseController, HttpError, HttpMethod, RequestQuery } from '../../libs/rest/index.js';
+import {
+  BaseController,
+  HttpError,
+  HttpMethod,
+  RequestQuery,
+  ValidateDtoMiddleware,
+  ValidateObjectIdMiddleware,
+} from '../../libs/rest/index.js';
 import { Logger } from '../../libs/logger/index.js';
 import { Component } from '../../types/index.js';
 import { CategoryService } from './category-service.interface.js';
@@ -23,8 +30,18 @@ export class CategoryController extends BaseController {
     this.logger.info('Register routes for CategoryController…');
 
     this.addRoute({ path: '/', method: HttpMethod.Get, handler: this.index });
-    this.addRoute({ path: '/', method: HttpMethod.Post, handler: this.create });
-    this.addRoute({ path: '/:categoryId/offers', method: HttpMethod.Get, handler: this.getOffersFromCategory });
+    this.addRoute({
+      path: '/',
+      method: HttpMethod.Post,
+      handler: this.create,
+      middlewares: [new ValidateDtoMiddleware(CreateCategoryDto)]
+    });
+    this.addRoute({
+      path: '/:categoryId/offers',
+      method: HttpMethod.Get,
+      handler: this.getOffersFromCategory,
+      middlewares: [new ValidateObjectIdMiddleware('categoryId')]
+    });
   }
 
   public async index(_req: Request, res: Response): Promise<void> {
