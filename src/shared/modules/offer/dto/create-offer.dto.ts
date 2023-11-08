@@ -14,9 +14,6 @@ export class CreateOfferDto {
   @IsDateString({}, { message: CreateOfferValidationMessage.postDate.invalidFormat })
   public postDate: Date;
 
-  @MaxLength(256, { message: CreateOfferValidationMessage.image.maxLength })
-  public image: string;
-
   @IsEnum(OfferType, { message: CreateOfferValidationMessage.type.invalid })
   public type: OfferType;
 
@@ -29,6 +26,5 @@ export class CreateOfferDto {
   @IsMongoId({ each: true, message: CreateOfferValidationMessage.categories.invalidId })
   public categories: string[];
 
-  @IsMongoId({ message: CreateOfferValidationMessage.userId.invalidId })
   public userId: string;
 }

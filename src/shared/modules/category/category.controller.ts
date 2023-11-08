@@ -4,6 +4,7 @@ import {
   BaseController,
   HttpError,
   HttpMethod,
+  PrivateRouteMiddleware,
   RequestQuery,
   ValidateDtoMiddleware,
   ValidateObjectIdMiddleware,
@@ -34,7 +35,10 @@ export class CategoryController extends BaseController {
       path: '/',
       method: HttpMethod.Post,
       handler: this.create,
-      middlewares: [new ValidateDtoMiddleware(CreateCategoryDto)]
+      middlewares: [
+        new PrivateRouteMiddleware(),
+        new ValidateDtoMiddleware(CreateCategoryDto)
+      ]
     });
     this.addRoute({
       path: '/:categoryId/offers',
@@ -42,6 +46,7 @@ export class CategoryController extends BaseController {
       handler: this.getOffersFromCategory,
       middlewares: [new ValidateObjectIdMiddleware('categoryId')]
     });
+    this.addRoute({ path: '/', method: HttpMethod.Get, handler: this.index });
   }
 
   public async index(_req: Request, res: Response): Promise<void> {
