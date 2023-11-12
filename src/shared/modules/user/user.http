@@ -5,11 +5,12 @@ POST http://localhost:4000/users/register HTTP/1.1
 Content-Type: application/json
 
 {
-  "email": "torans@overlook.net",
-  "avatarPath": "torrance.png",
-  "firstname": "Jack",
-  "lastname": "Torrance",
-  "password": "shining"
+  "email": "remarque@writers.net",
+  "avatarPath": "remarque.png",
+  "firstname": "Erich",
+  "lastname": "Remarque",
+  "password": "front1919",
+  "type": "regular"
 }
 
 ###
@@ -20,22 +21,22 @@ POST http://localhost:4000/users/login HTTP/1.1
 Content-Type: application/json
 
 {
-  "email": "torans@overlook.net",
-  "password": "shining"
+  "email": "remarque@writers.net",
+  "password": "front1919"
 }
 
 ###
 
 ## Отправить изображение
 
-POST http://localhost:4000/users/65258514a30fc6ef77c0edef/avatar HTTP/1.1
+POST http://localhost:4000/users/654fc55d04a7665292c7f920/avatar HTTP/1.1
 Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
 
 ------WebKitFormBoundary7MA4YWxkTrZu0gW
-Content-Disposition: form-data; name="avatar"; filename="screen.png"
-Content-Type: image/png
+Content-Disposition: form-data; name="avatar"; filename="pass.jpg"
+Content-Type: image/jpeg
 
-< /Users/spider_net/Desktop/screen.png
+< /Users/drnickopol/Desktop/pass.jpg
 ------WebKitFormBoundary7MA4YWxkTrZu0gW--
 
 ##
@@ -44,6 +45,6 @@ Content-Type: image/png
 
 ## Проверить токен пользователя
 GET http://localhost:4000/users/login HTTP/1.1
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6InRvcmFuc0BvdmVybG9vay5uZXQiLCJpZCI6IjY0NzBiYzM4M2UzMGRiNjc5ZGZhYzJkMiIsImlhdCI6MTY4NTk3NTQ4MiwiZXhwIjoxNjg2MTQ4MjgyfQ.Gq2-B1egouAnMxmXlR2ElVT6wCa97PS6lxzVI8LnGvo
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6InJlbWFycXVlQHdyaXRlcnMubmV0IiwiZmlyc3RuYW1lIjoiRXJpY2giLCJsYXN0bmFtZSI6IlJlbWFycXVlIiwiaWQiOiI2NTRmYzU1ZDA0YTc2NjUyOTJjN2Y5MjAiLCJ0eXBlIjoicmVndWxhciIsImlhdCI6MTY5OTc5MTQ2NCwiZXhwIjoxNjk5OTY0MjY0fQ.QfEs2rPlKnrahOB5Ghru_EVY7z_Yd0V36oJtvSV7W3Y
 
 ###

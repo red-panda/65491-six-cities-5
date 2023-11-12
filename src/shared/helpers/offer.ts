@@ -41,9 +41,9 @@ export function createOffer(offerData: string): Offer {
     price: Number.parseInt(price, 10),
     conveniences: conveniences.split(';')
       .map((item) => <ConvenienceType>item),
-    user: { email, firstname, lastname, avatarPath },
+    user: { email, firstname, lastname, avatarPath, type },
     comments: comments.split(';')
-      .map((coord) => coord),
+      .map((comment) => comment),
     coordinates: coordinates.split(';')
       .map((coord) => coord),
   };

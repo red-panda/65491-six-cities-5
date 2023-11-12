@@ -29,7 +29,7 @@ export class OfferEntity extends defaultClasses.TimeStamps {
   public image!: string;
 
   @prop()
-  public thumbs!: string[];
+  public thumbs!: string;
 
   @prop()
   public premium!: boolean;
@@ -79,7 +79,7 @@ export class OfferEntity extends defaultClasses.TimeStamps {
   public userId!: Ref<UserEntity>;
 
   @prop()
-  public coordinates!: string[];
+  public coordinates!: string;
 }
 
 export const OfferModel = getModelForClass(OfferEntity);

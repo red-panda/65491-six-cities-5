@@ -17,4 +17,7 @@ export const CreateUserMessages = {
     invalidFormat: 'password is required',
     lengthField: 'min length for password is 6, max is 12'
   },
+  type: {
+    invalidFormat: 'user type is required'
+  },
 } as const;

@@ -3,4 +3,5 @@ export type TokenPayload = {
   firstname: string;
   lastname: string;
   id: string;
+  type: string;
 };

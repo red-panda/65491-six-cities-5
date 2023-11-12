@@ -15,4 +15,7 @@ export class LoggedUserRdo {
 
   @Expose()
   public lastname: string;
+
+  @Expose()
+  public type: string;
 }
